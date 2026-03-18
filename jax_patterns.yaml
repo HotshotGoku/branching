@@ -1,0 +1,38 @@
+name: jax_patterns
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - scikit-image
+  - pillow
+  - imageio
+  - tifffile
+  - pyyaml
+  - omegaconf
+  - tqdm
+  - ipykernel
+
+  # PyTorch GPU (CUDA 12.4)
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.4
+
+  # optional but common
+  - einops
+
+  - pip:
+      # JAX GPU (CUDA 12.x)
+      - "jax[cuda12]"
+      - flax
+      - optax
+      - chex
